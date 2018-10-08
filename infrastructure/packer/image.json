@@ -1,0 +1,15 @@
+{
+  "variables": {
+    "do_api_token": null
+  },
+  "sensitive-variables": ["do_api_token"],
+  "builders": [{
+    "type": "digitalocean",
+    "api_token": "{{ user `do_api_token` }}",
+    "image": "ubuntu-18-04-x64",
+    "region": "sfo2",
+    "size": "s-1vcpu-1gb",
+    "ssh_username": "root",
+    "droplet_name": "RisePath App {{ timestamp }}"
+  }]
+}
