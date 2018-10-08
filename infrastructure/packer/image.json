@@ -10,6 +10,16 @@
     "region": "sfo2",
     "size": "s-1vcpu-1gb",
     "ssh_username": "root",
-    "droplet_name": "RisePath App {{ timestamp }}"
+    "snapshot_name": "RisePath-App-{{ timestamp }}"
+  }],
+  "provisioners": [{
+    "type": "file",
+    "source": "configs/",
+    "destination": "/tmp"
+  }, {
+    "type": "shell",
+    "scripts": [
+      "scripts/configure_nginx.sh"
+    ]
   }]
 }
