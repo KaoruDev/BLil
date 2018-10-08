@@ -10,7 +10,7 @@
     "region": "sfo2",
     "size": "s-1vcpu-1gb",
     "ssh_username": "root",
-    "snapshot_name": "RisePath-App-{{ timestamp }}"
+    "snapshot_name": "RisePath-1vcpu-1gb-{{ timestamp }}"
   }],
   "provisioners": [{
     "type": "file",
